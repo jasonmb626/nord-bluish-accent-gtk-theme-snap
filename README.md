@@ -22,9 +22,8 @@ snapcraft --destructive-mode
 ```
 
 ## Installing the snap
-TODO: Update to strict confinement and stable grade
 ```sh
-sudo snap install nord-bluish-accent-gtk-theme_0.1_all.snap --devmode
+sudo snap install nord-bluish-accent-gtk-theme_0.1_all.snap --dangerous
 ```
 
 ## Plugging snaps into the theme
