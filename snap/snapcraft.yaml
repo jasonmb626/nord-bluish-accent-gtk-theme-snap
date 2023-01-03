@@ -1,0 +1,36 @@
+name: nord-bluish-accent-gtk-theme
+base: core18
+architectures:
+  - all
+version: '0.1'
+summary: Nord GTK, cursor, and icon themes
+description: |
+  A snap that exports the Nord GTK, cursor and icon themes.
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: devmode # use 'strict' once you have the right plugs and slots
+
+slots:
+  gtk-2-themes:
+    interface: content
+    source:
+      read:
+        - $SNAP/share/themes/Nordic-bluish-accent
+  gtk-3-themes:
+    interface: content
+    source:
+      read:
+        - $SNAP/share/themes/Nordic-bluish-accent
+  icon-themes:
+    interface: content
+    source:
+      read:
+      - $SNAP/share/icons/Nordic
+      - $SNAP/share/icons/Nordzy-cursors
+
+parts:
+  my-part:
+    plugin: dump
+    source: local-source/
+
+    
